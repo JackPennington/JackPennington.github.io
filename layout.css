@@ -1,0 +1,237 @@
+.container-content {padding: 10px; margin-left: auto; margin-right: auto; max-width: 700px;}
+
+.content {text-align: center; padding: 5px; margin-left: auto; margin-right: auto; max-width: 700px; /* border: 1px solid red; */}
+.content {font-family: 'Lato', Helvetica, sans-serif;}
+
+
+img {max-width: 100%; height: auto;}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: 'Lato', Helvetica, sans-serif;;
+    margin: 0;
+}
+
+h1 h2 {
+    font-family: 'Lato', Helvetica, sans-serif;;
+}
+
+#images .an-image {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.an-image figcaption {
+    margin: 9;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 736px) {
+
+    .image-gallery{
+        margin: 0px 0;
+    }
+    .image-gallery .content {
+        display: flex;
+        text-align: left;
+        justify-content: center;
+        background: none;
+      }
+      .image-gallery .container-content {
+        max-width: 1000px;
+      }
+      .an-image {
+        flex: 33%; /* assumes three images */
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        background: none;
+        max-width: 333px; /* change this if you want to */
+        text-align: center;
+        /* border: 1px solid blue; /* just so you can see what's happening */
+      }
+}
+
+.image-gallery .container-content {
+    max-width: 100%; /* border: 1px solid green; */
+    text-align: center;
+}
+.image-gallery .content {
+    max-width: 1200px; /* border: 1px solid green; */
+}
+
+.profile-pic {
+    border-radius: 50%; 
+    width: 100%;
+    max-width: 150px;
+}
+
+.page-nav ul { /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-nav a {
+    flex-wrap: wrap;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 40px;
+    color: #0c8341;
+    font-weight: bold;
+    background-color: #e7e7e7;
+}
+
+.page-nav li {
+    flex: 1 1 50%;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.page-nav a {
+    padding: 15px 10px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.page-nav a:hover {
+    color: #e7e7e7;
+    font-weight: bold;
+    background-color: #0c8341;
+}
+
+@media screen and (min-width: 770px) {
+    .page-nav ul {  flex-wrap: nowrap; }
+    .page-nav li {
+       flex: 1 1 25%;
+    }
+    .page-nav {
+        margin: 0px 0px;
+        justify-content: center;
+        background: none;
+        max-width: 800px;
+        margin:auto;
+    }
+
+    .page-nav ul {
+        display: flex;
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        background: none;
+        /* border: 5px solid blue; /* just so you can see what's happening */
+    }
+
+    .page-nav li {
+        flex: 25%; /* assumes theirs 4 */
+    }
+}
+
+label {
+    display: block;
+    /* instead of inline */
+    padding-bottom: 0.2em;
+    padding-top: 1em;
+  }
+  
+  label strong {
+    display: block;
+    font-size: 0.9rem;
+    color: red;
+  }
+  
+  input,
+  textarea {
+    padding: 0.4em 0.3em;
+    font-size: 1.5em;
+      /* these elements do not inherit the font-family from the body tag */
+    
+    font-family: arial, helvetica, sans-serif;
+  
+    /* lighter grey, less visually heavy */
+    border: 1px solid #bbb; 
+    /* make sure our fields aren't too wide or not wide enough */
+    min-width: 90%;
+    max-width: 90%;
+  }
+  
+  input[type="submit"] {
+    /* https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors */
+    display: inline-block;
+    /* if you used display:block; this would go right across the page - if you use inline-block the button will only be as wide as the text and the padding */
+    min-width: 0;
+    /* turn off a minimum width for the button and let the browser work it out */
+    background-color: #0c8341;
+    border-radius: 0.2em;
+    padding: 13px 30px;
+    margin-top: 10px;
+    /* top and bottom, left and right */
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFF;
+    transition: background-color 0.3s ease;
+    /* less jarring transition from initial colour to hover colour */
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+  }
+  
+  input[type="submit"]:hover {
+    cursor: pointer;
+    /* give it the same cursor as everything else you have to click on */
+    background-color: #096330;
+    /* you don't have to change the colour too much for hover states - just make it a little bit lighter or darker */
+  }
+  
+.follow-me {
+    border-top: 1px solid #eee;
+    padding: 5px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 100%;
+    text-align: center;
+}
+
+.follow-me img {
+    height: 30px;
+    width: 30px;
+    vertical-align: top;
+    margin-left: 50px;
+    border-radius: 50%;
+}
+
+.follow-me .facebook-logo {
+    margin-left: 0;
+}
+
+.follow-me img:hover {
+    color: #0770cf;
+    border: 2px solid #0770cf;
+}
+
+.page-footer {
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+}
+
+
+
