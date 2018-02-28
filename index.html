@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-gb">
 
@@ -11,12 +10,39 @@
     <title>Jack Penningtons Personal Website</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="layout.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="author" content="Paul Lewis and Surma" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="theme-color" content="#EA2663">
+    <title>Side Nav</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
 </head>
 
 <body>
     <main>
+        <div class="header">
+                <button class="js-menu-show header__menu-toggle material-icons">menu</button>
+            </div>
+            
+            <aside class="js-side-nav side-nav">
+                <nav class="js-side-nav-container side-nav__container">
+                <button class="js-menu-hide side-nav__hide material-icons">close</button>
+                <header class="side-nav__header">
+                    Menu
+                </header>
+                <ul class="side-nav__content">
+                    <li><a href="#about">About Me</a></li>
+                    <li>Work Experience</li>
+                    <li>Image Gallery</li>
+                    <li>Contact Me</li>
+                </ul>
+                </nav>
+            </aside>
+            <script src='./detabinator.js'></script>
+            <script src='./side-nav.js'></script>
+            </body>
         <header class="page-header">
             <div class="header-content content">
                 <figure>

@@ -4,7 +4,6 @@
 .content {text-align: center; padding: 5px; margin-left: auto; margin-right: auto; max-width: 700px; /* border: 1px solid red; */}
 .content {font-family: 'Lato', Helvetica, sans-serif;}
 
-
 img {max-width: 100%; height: auto;}
 
 html {
@@ -16,9 +15,148 @@ html {
   }
 
 body {
-    font-family: 'Lato', Helvetica, sans-serif;;
+    font-family: 'Lato', Helvetica, sans-serif;
     margin: 0;
 }
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    padding: 0;
+    margin: 0;
+    background: #FAFAFA;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    width: 100%;
+    height: 56px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    background: #333;
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px;
+  }
+  
+  .header__menu-toggle {
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    color: #FFF;
+  }
+  
+  .side-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .side-nav--visible {
+    pointer-events: auto;
+  }
+  
+  .side-nav::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
+  }
+  
+  .side-nav__container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background: #FFF;
+    height: 100%;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.4);
+    transform: translateX(-102%);
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+  }
+  
+  .side-nav--animatable .side-nav__container {
+    transition: transform 0.13s cubic-bezier(0,0,0.3,1);
+  }
+  
+  .side-nav--visible.side-nav--animatable .side-nav__container {
+    transition: transform 0.33s cubic-bezier(0,0,0.3,1);
+  }
+  
+  .side-nav--visible::before {
+    opacity: 1;
+  }
+  
+  .side-nav--visible .side-nav__container {
+    transform: none;
+  }
+  
+  .side-nav__hide {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    background: none;
+    border: none;
+    color: #FFF;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-nav__header {
+    height: 150px;
+    background: #0c8341;
+    color: #FFF;
+    display: flex;
+    padding: 16px;
+    align-items: flex-end;
+    font-size: 24px;
+  }
+  
+  .side-nav__content {
+    padding-top: 32px;
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .side-nav__content li {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+  }
+  
+  .side-nav__content li:hover {
+    background: #CCC;
+  }
+
+  @media screen and (min-width: 1024px) {
+
+  }
 
 h1, h2 {
     font-family: 'Lato', Helvetica, sans-serif;
@@ -45,7 +183,7 @@ h1, h2 {
     padding: 10px 0 0 0;
 }
 
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 667px) {
 
     .image-gallery{
         margin: 0px 0;
@@ -175,14 +313,11 @@ label {
     color: red;
   }
   
-  input,
-  textarea {
+  input, textarea {
     padding: 0.4em 0.3em;
     font-size: 1.5em;
       /* these elements do not inherit the font-family from the body tag */
-    
     font-family: arial, helvetica, sans-serif;
-  
     /* lighter grey, less visually heavy */
     border: 1px solid #bbb; 
     /* make sure our fields aren't too wide or not wide enough */
@@ -196,7 +331,9 @@ label {
     /* if you used display:block; this would go right across the page - if you use inline-block the button will only be as wide as the text and the padding */
     min-width: 0;
     /* turn off a minimum width for the button and let the browser work it out */
-    background-color: #0c8341;
+    background-color: #0bb955;
+    border: 1px solid #0bb955; 
+    box-shadow: 0 2px 0 0 #087838;
     border-radius: 0.2em;
     padding: 13px 30px;
     margin-top: 10px;
@@ -215,7 +352,8 @@ label {
   input[type="submit"]:hover {
     cursor: pointer;
     /* give it the same cursor as everything else you have to click on */
-    background-color: #096330;
+    background-color: #087838;
+    border: 1px solid #087838; 
     /* you don't have to change the colour too much for hover states - just make it a little bit lighter or darker */
   }
 
