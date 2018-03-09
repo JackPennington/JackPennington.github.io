@@ -4,19 +4,18 @@
 .content {text-align: center; padding: 5px; margin-left: auto; margin-right: auto; max-width: 700px; /* border: 1px solid red; */}
 .content {font-family: 'Lato', Helvetica, sans-serif;}
 
-
 img {max-width: 100%; height: auto;}
 
 html {
     box-sizing: border-box;
-    border: 2px red solid;
+    /* border: 2px red solid; */
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
 
 body {
-    font-family: 'Lato', Helvetica, sans-serif;;
+    font-family: 'Lato', Helvetica, sans-serif;
     margin: 0;
 }
 
@@ -26,7 +25,6 @@ h1, h2 {
 }
 
 .container-content div p {
-    padding: 0 15px 0 15px;
     line-height: 25px;
     color: darkslategray;
     font-size: 15px;
@@ -43,9 +41,10 @@ h1, h2 {
     margin: 9;
     font-weight: bold;
     padding: 10px 0 0 0;
+    text-align: left;
 }
 
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 667px) {
 
     .image-gallery{
         margin: 0px 0;
@@ -175,14 +174,11 @@ label {
     color: red;
   }
   
-  input,
-  textarea {
+  input, textarea {
     padding: 0.4em 0.3em;
     font-size: 1.5em;
       /* these elements do not inherit the font-family from the body tag */
-    
     font-family: arial, helvetica, sans-serif;
-  
     /* lighter grey, less visually heavy */
     border: 1px solid #bbb; 
     /* make sure our fields aren't too wide or not wide enough */
@@ -196,7 +192,9 @@ label {
     /* if you used display:block; this would go right across the page - if you use inline-block the button will only be as wide as the text and the padding */
     min-width: 0;
     /* turn off a minimum width for the button and let the browser work it out */
-    background-color: #0c8341;
+    background-color: #0bb955;
+    border: 1px solid #0bb955; 
+    box-shadow: 0 2px 0 0 #087838;
     border-radius: 0.2em;
     padding: 13px 30px;
     margin-top: 10px;
@@ -215,7 +213,8 @@ label {
   input[type="submit"]:hover {
     cursor: pointer;
     /* give it the same cursor as everything else you have to click on */
-    background-color: #096330;
+    background-color: #087838;
+    border: 1px solid #087838; 
     /* you don't have to change the colour too much for hover states - just make it a little bit lighter or darker */
   }
 
