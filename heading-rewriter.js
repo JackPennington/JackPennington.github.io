@@ -20,4 +20,4 @@ if(currenthour>18 && currenthour < 22){
 }
 
 var getheading = document.querySelector('.header-content h1');
-getheading.insertAdjacentHTML('afterend','<p>'+welcomemessage+'</p>');
+getheading.insertAdjacentHTML('afterend','<p class="mainheading">'+welcomemessage+'</p>');

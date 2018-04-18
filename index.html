@@ -19,13 +19,14 @@
 
 <body>
     <main>
-            </body>
+        </body>
         <header class="page-header">
+            <div class="header-bg"></div>
             <div class="header-content content">
                 <figure>
-                    <img class="profile-pic" src="images/pp.jpg" title="A profile picture of me on my nineteenth birthday" alt="My profile picture of me">
+                    <img class="profile-pic" src="images/pp.jpg" title="A profile picture of me at my mates twentieth" alt="My profile picture of me">
                 </figure>
-                <h1>Jack Pennington Portfolio</h1>
+                <h1 class="mainheading">Jack Pennington Portfolio</h1>
             </div>
         </header>
         <nav class="page-nav">
@@ -41,7 +42,7 @@
                 <h2>About Me</h2>
                 <div class="content">
                     <p>
-                        Hello, welcome to my peronal website. I am 19 years old and live in Wigan I went to Highfield St Matthews Primary School then went to Abraham Guest High School before doing my A-levels at St John Rigby College and I am now currently employed on a Higher Degree Apprenticeship as a Business Analyst with Shop Direct who own Very, Littlewoods and Very Exclusive. Whilst working I also study Digital and Technology Solutions at Manchester Metropolitan University. I live in a family of 6, my Mum, Dad and 3 brothers. I have recently purchased and currently drive a Volkswagen Golf TSI. I support Wigan Athletic FC (UP THE TICS!) and go watching the home or away matches with my mates, I also enjoy watching any league of football. I occasionally enjoy playing golf in the summer.
+                        Hello, welcome to my personal website. I am 19 years old and live in Wigan. I attended Highfield St Matthews Primary School before going to Abraham Guest Academy to eventually doing my A-levels at St John Rigby College. Now I currently am employed on a Higher Degree Apprenticeship as a Business Analyst with Shop Direct who own Very, Littlewoods and Very Exclusive. Whilst working I also study Digital and Technology Solutions at Manchester Metropolitan University. I live in a family of 6 people, my Mum, Dad and 3 brothers. I have recently purchased and currently drive a Volkswagen Golf TSI. I support Wigan Athletic FC (UP THE TICS!) and I go watching the home or away matches with my mates, I also enjoy watching any league of football. I occasionally enjoy playing golf in the summer.
                     </p>
                 </div>
             </div>
@@ -64,7 +65,7 @@
                          <img src="images/icebar.jpg" title="Me in Amsterdam Icebar with the lads" alt="Icebar in Amsterdam with my best mates"/>
                          <figcaption>Amsterdam Icebar with the lads</figcaption>
                         <p> 
-                            Lorem Ipsum But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.
+                            In this picture from left to right is Tommy, Danny, Jake, Ahmed, Louis, Andy and then me. These are just some of my mates that could come to Amsterdam.
                         </p>
                      </figure>
 
@@ -72,15 +73,15 @@
                         <img src="images/car.jpg" title="My VW Golf TSI" alt="My Volkswagen Mark 7 Golf TSI"/>
                         <figcaption>My VW Golf TSI</figcaption>
                         <p>
-                            Lorem Ipsum On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment.
+                            This is my second car that I have owned so far, before this I drove a Renault Clio mk2. I was able to purchase this car when I started my Degree Apprenticeship.
                         </p>
                     </figure>
 
                     <figure class="an-image">
-                        <img src="images/newyear.jpg" title="New Year 2017-18 with my best mates" alt="New Years Day 2018 with Louis, Caitlyn and Liz."/>
-                        <figcaption>New Year 2017-18 with Louis, Caitlyn and Liz</figcaption>
+                        <img src="images/newyear.jpg" title="New Year 2018 with my best mates" alt="New Years Day 2018 with Louis, Caitlyn and Liz."/>
+                        <figcaption>New Year 2018 with Louis, Caitlyn and Liz</figcaption>
                         <p>
-                            Lorem Ipsum On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment.
+                            This picture was taken in Wigan whilst celebrating the New year with my mates. Yes, mates. Caitlyn and Liz are my girl mates that I got to know through college and have continued to be my mates ever since.
                         </p>
                     </figure>
                 </div>
@@ -126,10 +127,13 @@
         </section>
         <footer class="page-footer">
             <div class="footer-content content">
-                <p> <span class="footer-text">&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a>
-    </span> <span class="footer-separator">&middot;</span> <span class="footer-text">Jack Pennington</span> <span class="footer-separator">&middot;</span> <span class="footer-text">This is student coursework</span> <span class="footer-separator">&middot;</span> <span class="footer-text">Tutor <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a></span> <span class="footer-separator">&middot;</span> <span class="footer-text">
-     <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service" >Valid HTML</a>
-        </span> </p>
+                <p> <span class="footer-text">&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> </span> 
+                <span class="footer-separator">&middot;</span> <span class="footer-text">Jack Pennington</span> 
+                <span class="footer-separator">&middot;</span> <span class="footer-text">This is student coursework</span>
+                <span class="footer-separator">&middot;</span> <span class="footer-text">Tutor <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a></span>
+                <span class="footer-separator">&middot;</span> 
+                <span class="footer-text"> <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service" >Valid HTML</a> </span> 
+                </p>
             </div>
         </footer>
     </main>
@@ -138,17 +142,42 @@
 
     var el = Array.prototype.slice.call(document.querySelectorAll('.page-nav a'));
 
-    function scrollIt(element) {
-        element.scrollIntoView({
-            'behavior': 'smooth'
-        });
+    function scrollTo(to, duration) {
+        var start = window.pageYOffset,
+            change = to - start,
+            currentTime = 0,
+            increment = 20;
+
+
+        var animateScroll = function(){        
+            currentTime += increment;              
+            var val = Math.easeInOutQuad(currentTime, start, change, duration);              
+            window.scrollTo(0, val);
+            console.log(val);
+            if(currentTime < duration) {            
+                setTimeout(animateScroll, increment);
+            }
+        };
+        animateScroll();
     }
+
+    //t = current time
+    //b = start value
+    //c = change in value
+    //d = duration
+    Math.easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    };
 
     el.forEach(function(ops){        
         ops.addEventListener('click', function(e) {            
             e.preventDefault();
             var section = document.getElementById(ops.getAttribute('href').replace('#', ''));
-            scrollIt(section);
+            var topPos = section.offsetTop;
+            scrollTo(topPos-10, 600);            
         });
     });
 }());
