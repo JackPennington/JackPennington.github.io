@@ -10,6 +10,10 @@ img {max-width: 100%; height: auto; border-radius: 5px;}
     --website-primary: #1A936F;
 }
 
+section:nth-child(even) {
+    background: #e7e7e736;
+}
+
 html {
     box-sizing: border-box;
   }
