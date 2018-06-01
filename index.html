@@ -10,25 +10,24 @@
     <title>Jack Penningtons Personal Website</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="layout.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <meta charset="utf-8">
-    <meta name="author" content="Paul Lewis and Surma" />
+    <meta name="author" content="Jack Pennington" />
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="theme-color" content="#EA2663">
+    <meta name="theme-color" content="#1A936F">
 </head>
 
 <body>
     <main>
-        </body>
+        <!-- Section One Header -->
         <header class="page-header">
             <div class="header-bg"></div>
             <div class="header-content content">
-                <figure>
+                <figure> <!-- Personal Photograph -->
                     <img class="profile-pic" src="images/pp.jpg" title="A profile picture of me at my mates twentieth" alt="My profile picture of me">
                 </figure>
                 <h1 class="mainheading">Jack Pennington's Portfolio</h1>
             </div>
         </header>
+        <!-- The Navigation bar underneath the header -->
         <nav class="page-nav">
                 <ul>
                     <li><a href="#about">About Me</a></li>
@@ -37,25 +36,28 @@
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </nav>
+        <!-- Section Two Description about me -->
         <section id="about" class="about-me container">
             <div class="container-content">
                 <h2>About Me</h2>
                 <div class="content">
                     <p>
-                        Hello, welcome to my personal website. I am 19 years old and live in Wigan. I attended Highfield St Matthews Primary School before going to Abraham Guest Academy to eventually doing my A-levels at St John Rigby College. Now I currently am employed on a Higher Degree Apprenticeship as a Business Analyst with Shop Direct who own Very, Littlewoods and Very Exclusive. Whilst working I also study Digital and Technology Solutions at Manchester Metropolitan University. I live in a family of 6 people, my Mum, Dad and 3 brothers. I have recently purchased and currently drive a Volkswagen Golf TSI. I support Wigan Athletic FC (UP THE TICS!) and I go watching the home or away matches with my mates, I also enjoy watching any league of football. I occasionally enjoy playing golf in the summer.
+                        Hello, welcome to my personal website. I am 19 years old and live in Wigan. I attended Highfield St Matthews Primary School before going to Abraham Guest Academy to eventually doing my A-levels at St John Rigby College. I am currently employed on a Higher Degree Apprenticeship as a Business Analyst with Shop Direct who are responsible for Very, Littlewoods and Very Exclusive. Whilst working I also study Digital and Technology Solutions at Manchester Metropolitan University. My family comprises 6 people including my Mum, Dad, 3 brothers and myself. I currently drive a Volkswagen Golf TSI and I support Wigan Athletic FC (UP THE TICS!). I attend home and away matches with friends. In fact I enjoy watching football of any standard. I occasionally enjoy playing golf in the summer.
                     </p>
                 </div>
             </div>
+        <!-- Section Three Work Experiance -->
         </section>
         <section id="work" class="work-experience container">
             <div class="container-content">
                 <h2>Work Experience</h2>
                 <div class="content">
                     <p>
-                        My work experience started when I was just 14. I started to referee football games on a Saturday. The pay was amazing! I would have on average two games a week and bring home £44 for 3 hours work, this would take people my age two days to earn from a part time job. Eventually I started to hate standing in the snow, so I landed a part time job at Clarks Shoes. I spent a short while there and was awarded employee of the month the first month I was there! I then moved onto Dominos, where the pay was double Clarks pay and also working with my mates. Two years passed, majority of the time working instore making pizzas. The last 9 months spent delivering pizzas when I got my first car. I currently work for Shop Direct as a Business Analyst, working on <a href="http://www.very.co.uk/" target="_blank" title="Very Website">Very.co.uk</a>, <a href="https://www.littlewoods.com/" target="_blank" title="Littlewoods Website" >Littlewoods</a> &amp; <a href="https://www.veryexclusive.co.uk/" target="_blank" title="Very Exclusive Website">Very Exclusive</a> whilst attending Manchester Metropolitan University studying Digital &amp; Technology Solutions.
+                        My work experience started when I was just 14. My first job was to referee football games on a Saturday. The pay was amazing! I was responsible on average for two games per week. I landed a part time job at Clarks Shoes. I spent a short while there and was awarded employee of the month the first month I was there! I then moved onto working at Dominos, where I was working with my mates. Two years passed, majority of the time working in-store making pizzas. The last 9 months spent delivering pizzas when I got my first car. I currently work for Shop Direct as a Business Analyst, working on <a href="http://www.very.co.uk/" target="_blank" title="Very Website">Very.co.uk</a>, <a href="https://www.veryexclusive.co.uk/" target="_blank" title="Very Exclusive Website">Very Exclusive</a>, <a href="https://www.littlewoods.com/" target="_blank" title="Littlewoods Website" >Littlewoods</a> &amp; <a href="https://www.littlewoodsireland.ie" target="_blank" title="Littlewoods Ireland Website" >Littlewoods Ireland</a> whilst attending Manchester Metropolitan University studying Digital &amp; Technology Solutions.
                     </p>
                 </div>
             </div>
+        <!-- Section Four Image Gallery -->
         </section>
         <section id="images" class="image-gallery">
             <div class="container-content">
@@ -73,7 +75,7 @@
                         <img src="images/car.jpg" title="My VW Golf TSI" alt="My Volkswagen Mark 7 Golf TSI"/>
                         <figcaption>My VW Golf TSI</figcaption>
                         <p>
-                            This is my second car that I have owned so far, before this I drove a Renault Clio mk2. I was able to purchase this car when I started my Degree Apprenticeship.
+                            This is my second car that I have owned, before this I drove a Renault Clio mk2. I was able to purchase this car when I started my Degree Apprenticeship.
                         </p>
                     </figure>
 
@@ -86,6 +88,7 @@
                     </figure>
                 </div>
             </div>
+        <!-- Section Five Contact Form & Social Media Links-->
         </section>
         <section id="contact" class="contact-me">
             <div class="container-content">
@@ -137,52 +140,8 @@
             </div>
         </footer>
     </main>
-<script>
-(function() {
-
-    var el = Array.prototype.slice.call(document.querySelectorAll('.page-nav a'));
-
-    function scrollTo(to, duration) {
-        var start = window.pageYOffset,
-            change = to - start,
-            currentTime = 0,
-            increment = 20;
-
-
-        var animateScroll = function(){        
-            currentTime += increment;              
-            var val = Math.easeInOutQuad(currentTime, start, change, duration);              
-            window.scrollTo(0, val);
-            console.log(val);
-            if(currentTime < duration) {            
-                setTimeout(animateScroll, increment);
-            }
-        };
-        animateScroll();
-    }
-
-    //t = current time
-    //b = start value
-    //c = change in value
-    //d = duration
-    Math.easeInOutQuad = function (t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    };
-
-    el.forEach(function(ops){        
-        ops.addEventListener('click', function(e) {            
-            e.preventDefault();
-            var section = document.getElementById(ops.getAttribute('href').replace('#', ''));
-            var topPos = section.offsetTop;
-            scrollTo(topPos-10, 600);            
-        });
-    });
-}());
-</script>
-    <script src='./heading-rewriter.js'></script>
+    <script src='./smooth-scrolling.js'></script>
+    <script src='./heading.js'></script>
 </body>
 
 </html>

@@ -1,14 +1,17 @@
 .container-content {padding: 10px; margin-left: auto; margin-right: auto; max-width: 700px; margin-bottom: 0;
     text-align: center;}
 
-.content {text-align: center; padding: 5px; margin-left: auto; margin-right: auto; max-width: 700px; /* border: 1px solid red; */}
+.content {text-align: center; padding: 5px; margin-left: auto; margin-right: auto; max-width: 700px;}
 .content {font-family: 'Lato', Helvetica, sans-serif;}
 
 img {max-width: 100%; height: auto; border-radius: 5px;}
 
+:root {
+    --website-primary: #1A936F;
+}
+
 html {
     box-sizing: border-box;
-    /* border: 2px red solid; */
   }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -23,9 +26,10 @@ body {
     position: relative;
 }
 
+/* Background Header Image */
 .header-bg {
     opacity: .3;
-    background-image: url(images/sdfront.jpg);
+    background-image: url(images/sdinside.jpg);
     background-size: cover;
     background-position: center 40%;
     width: 100%;
@@ -45,7 +49,7 @@ body {
 h1, h2 {
     font-family: 'Lato', Helvetica, sans-serif;
     margin: 15px 0 0 0;
-    color: #1A936F;
+    color: var(--website-primary);
     font-size: 35px;
 }
 
@@ -64,22 +68,26 @@ h1, h2 {
     color: #114B5F;
     font-size: 15px;
     text-align: left;
-    /*border: 1px solid red;*/
+    margin: 3px 0 3px 0;
+    padding: 5px;
 }
 
 #images .an-image {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 15px 10px 30px 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 8px rgba(0,0,0,0.16), 0 0 0 2px rgba(0,0,0,0.08);
 }
 
 .an-image figcaption {
+    font-size: 20px;
     font-weight: bold;
-    padding: 10px 0 0 0;
+    padding: 0 0 0 5px;
     text-align: left;
-    color: #1A936F;
+    color: var(--website-primary);
+    margin: 13px 0px 5px 0px;
 }
 
-@media screen and (min-width: 667px) {
+@media screen and (min-width: 600px) {
 
     .image-gallery{
         margin: 0px 0;
@@ -100,18 +108,17 @@ h1, h2 {
         padding-bottom: 5px;
         padding-left: 5px;
         background: none;
-        max-width: 333px; /* change this if you want to */
+        max-width: 333px; /* Width of the three photos */
         text-align: center;
-        /* border: 1px solid blue; /* just so you can see what's happening */
       }
 }
 
 .image-gallery .container-content {
-    max-width: 100%; /* border: 1px solid green; */
+    max-width: 100%;
     text-align: center;
 }
 .image-gallery .content {
-    max-width: 1200px; /* border: 1px solid green; */
+    max-width: 1200px;
 }
 
 .profile-pic {
@@ -120,12 +127,15 @@ h1, h2 {
     max-width: 150px;
 }
 
+/* Page Navigation Bar */
 .page-nav {
+    position: -webkit-sticky;
     position: sticky;
+    top: 0;
     box-shadow: 1px 5px 35px #b3b2b2;
 }
 
-.page-nav ul { /* border: 1px solid red; */
+.page-nav ul {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -139,8 +149,7 @@ h1, h2 {
     display: block;
     font-size: 16px;
     text-decoration: none;
-    line-height: 40px;
-    color: #1A936F;
+    color: var(--website-primary);
     font-weight: bold;
     background-color: #e7e7e7;
 }
@@ -170,7 +179,7 @@ h1, h2 {
 .page-nav a:hover {
     color: #e7e7e7;
     font-weight: bold;
-    background-color: #1A936F;
+    background-color: var(--website-primary);
 }
 
 @media screen and (min-width: 770px) {
@@ -191,11 +200,10 @@ h1, h2 {
         background: none;
         max-width: 800px;
         margin: auto;
-        /* border: 5px solid blue; /* just so you can see what's happening */
     }
 
     .page-nav li {
-        flex: 25%; /* assumes theirs 4 */
+        flex: 25%; /* assumes their's 4 */
     }
 }
 
@@ -215,11 +223,12 @@ label {
   input, textarea {
     padding: 0.4em 0.3em;
     font-size: 1.5em;
-      /* these elements do not inherit the font-family from the body tag */
+    /* these elements do not inherit the font-family from the body tag */
     font-family: arial, helvetica, sans-serif;
     /* lighter grey, less visually heavy */
     border: 1px solid #bbb; 
     /* make sure our fields aren't too wide or not wide enough */
+    border-radius: 5px;
     min-width: 100%;
     max-width: 90%;
   }
@@ -263,8 +272,6 @@ label {
 .follow-me {
     border-top: 1px solid #eee;
     padding: 5px;
-    /* margin-left: auto;
-    margin-right: auto; */
     width: 100%;
     text-align: center;
 }
@@ -282,8 +289,7 @@ label {
 }
 
 .follow-me img:hover {
-    border: 1px solid #FFF;
-    box-shadow:0 0 0px 3px #0770cf;
+    box-shadow: 0 0 0 1px #FFF, 0 0 0 3px #0770cf;
 }
 
 .follow-content {
