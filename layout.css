@@ -196,10 +196,6 @@ h1, h2 {
 
 }
 
-.page-nav li:last-child {
-    border-right:1px solid #ddd;
-}
-
 .page-nav a {
     border-bottom: 2px solid transparent;
     padding: 15px 10px;
