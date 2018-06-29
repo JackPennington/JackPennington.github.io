@@ -7,11 +7,31 @@
 img {max-width: 100%; height: auto; border-radius: 5px;}
 
 :root {
-    --website-primary: #1A936F;
+
+    /* Primary Colours */
+    --L-primary: #F3FFEE;
+    --S-primary: #00C853;
+    --D-primary: #00864C;
+
+    /* Primary Colours */
+    --L-secondary: #EFF9FF;
+    --S-secondary: #0091EA;
+    --D-secondary: #006AB8;
+
+    /* Grey Colours */
+    --L-grey: #F5F5F5;
+    --O-grey: #E0E0E0;
+    --M-grey: #919191;
+    --D-grey: #333333;
+
+    /* Alert Colours */
+    --L-alert: #FCF0F2;
+    --S-alert: #FF1744;
+    --D-alert: #C30000;
 }
 
-section:nth-child(even) {
-    background: #e7e7e736;
+section:nth-child(odd) {
+    background: var(--L-grey);
 }
 
 html {
@@ -53,41 +73,46 @@ body {
 h1, h2 {
     font-family: 'Lato', Helvetica, sans-serif;
     margin: 15px 0 0 0;
-    color: var(--website-primary);
-    font-size: 35px;
+    color: var(--S-primary);
+    font-size: 28px;
 }
 
 .mainheading {
+    margin: 0;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-    font-size: 45px;
+    font-size: 56px;
 }
 
 .welcomemessage {
-    font-size: 20px;
+    margin: 16px 0 32px 0;
+    font-size: 28px;
 }
 
 .container-content div p {
-    line-height: 25px;
-    color: #114B5F;
-    font-size: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: var(--D-grey);
     text-align: left;
+    font-style: normal;
     margin: 3px 0 3px 0;
-    padding: 5px;
+    padding: 10px;
 }
 
 #images .an-image {
     margin: 15px 10px 30px 10px;
     border-radius: 5px;
-    box-shadow: 10px 10px 8px rgba(0,0,0,0.16), 0 0 0 2px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .an-image figcaption {
     font-size: 20px;
     font-weight: bold;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 10px;
     text-align: left;
-    color: var(--website-primary);
+    color: var(--S-primary);
     margin: 13px 0px 5px 0px;
 }
 
@@ -126,6 +151,7 @@ h1, h2 {
 }
 
 .profile-pic {
+    margin: 32px 0 16px 0;
     border-radius: 50%; 
     width: 100%;
     max-width: 150px;
@@ -133,13 +159,16 @@ h1, h2 {
 
 /* Page Navigation Bar */
 .page-nav {
-    position: -webkit-sticky;
+    -webkit-position: -webkit-sticky;
     position: sticky;
     top: 0;
-    box-shadow: 1px 5px 35px #b3b2b2;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
 }
 
 .page-nav ul {
+    line-height: 20px;
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -153,23 +182,22 @@ h1, h2 {
     display: block;
     font-size: 16px;
     text-decoration: none;
-    color: var(--website-primary);
+    color: var(--D-grey);
     font-weight: bold;
-    background-color: #e7e7e7;
+    background-color: #FFF;
 }
 
 .page-nav li {
     flex: 1 1 50%;
     display: flex;
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
 }
 
 .page-nav li:last-child {
-    border-right:1px solid #ddd;
+
 }
 
 .page-nav a {
+    border-bottom: 2px solid transparent;
     padding: 15px 10px;
     display: flex;
     text-decoration: none;
@@ -181,9 +209,8 @@ h1, h2 {
 }
 
 .page-nav a:hover {
-    color: #e7e7e7;
-    font-weight: bold;
-    background-color: var(--website-primary);
+    border-bottom-color: var(--S-primary);
+    color: var(--S-primary);
 }
 
 @media screen and (min-width: 770px) {
@@ -196,10 +223,11 @@ h1, h2 {
         justify-content: center;
         background: none;
         margin:auto;
-        background: #e7e7e7;
+        background: #FFF;
     }
 
     .page-nav ul {
+        line-height: 40px;
         display: flex;
         background: none;
         max-width: 800px;
@@ -243,9 +271,8 @@ label {
     /* if you used display:block; this would go right across the page - if you use inline-block the button will only be as wide as the text and the padding */
     min-width: 0;
     /* turn off a minimum width for the button and let the browser work it out */
-    background-color: #0bb955;
-    border: 1px solid #0bb955; 
-    box-shadow: 0 2px 0 0 #087838;
+    background-color: var(--S-primary);
+    border: 1px solid var(--S-primary);
     border-radius: 0.2em;
     padding: 13px 30px;
     margin-top: 10px;
@@ -264,8 +291,8 @@ label {
   input[type="submit"]:hover {
     cursor: pointer;
     /* give it the same cursor as everything else you have to click on */
-    background-color: #087838;
-    border: 1px solid #087838; 
+    background-color: var(--D-primary);
+    border: 1px solid var(--D-primary); 
     /* you don't have to change the colour too much for hover states - just make it a little bit lighter or darker */
   }
 
@@ -293,7 +320,7 @@ label {
 }
 
 .follow-me img:hover {
-    box-shadow: 0 0 0 1px #FFF, 0 0 0 3px #0770cf;
+    box-shadow: 0 0 0 1px #FFF, 0 0 0 3px var(--D-secondary);
 }
 
 .follow-content {
@@ -304,6 +331,5 @@ label {
     background-color: rgb(235, 235, 235);
     width: 100%;
 }
-
 
 
