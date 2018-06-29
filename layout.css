@@ -73,7 +73,7 @@ body {
 h1, h2 {
     font-family: 'Lato', Helvetica, sans-serif;
     margin: 15px 0 0 0;
-    color: var(--S-primary);
+    color: var(--D-primary);
     font-size: 28px;
 }
 
@@ -112,7 +112,7 @@ h1, h2 {
     font-weight: bold;
     padding: 0 0 0 10px;
     text-align: left;
-    color: var(--S-primary);
+    color: var(--D-primary);
     margin: 13px 0px 5px 0px;
 }
 
@@ -209,8 +209,8 @@ h1, h2 {
 }
 
 .page-nav a:hover {
-    border-bottom-color: var(--S-primary);
-    color: var(--S-primary);
+    border-bottom-color: var(--D-primary);
+    color: var(--D-primary);
 }
 
 @media screen and (min-width: 770px) {
